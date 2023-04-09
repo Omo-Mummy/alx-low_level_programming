@@ -24,7 +24,8 @@ int create_file(const char *filename, char *text_content)
 	if (!text_content)
 		text_content = "";
 
-	for (numletters = 0; text_content[numletters]; numletters++);
+	for (numletters = 0; text_content[numletters]; numletters++)
+		;
 
 	wr = write(fd, text_content, numletters);
 
